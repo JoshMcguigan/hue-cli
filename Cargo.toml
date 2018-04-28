@@ -1,0 +1,10 @@
+[package]
+name = "hue-cli"
+version = "0.1.0"
+authors = ["Josh Mcguigan <>"]
+
+[dependencies]
+philipshue = "0.3.2"
+preferences = "1.1.0"
+structopt = "0.2.8"
+clap = "2.31.2"
