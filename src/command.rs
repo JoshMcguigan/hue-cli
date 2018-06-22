@@ -29,7 +29,13 @@ pub fn command(bridge: Bridge, cmd: Command) {
                 Err(err) => println!("Error: {}", err),
             }
 
-            if light_state == Some(true) { hue::LightCommand::default().off() } else { hue::LightCommand::default().on() }
+            if light_state == Some(true) {
+                hue::LightCommand::default().off()
+            } else {
+                hue::LightCommand::default()
+                    .on()
+                    .with_bri(u8::max_value())
+            }
         }
     };
 
